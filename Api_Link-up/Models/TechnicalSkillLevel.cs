@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace Api_Link_up.Models
 {
-    public class TechnicalSkill
+    public class TechnicalSkillLevel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         
         [Required]
-        [StringLength(100)]
+        [StringLength(50)]
         public string Name { get; set; }
         
-        public ICollection<TechnicalSkillLevel> TechnicalSkillLevels { get; set; }
+        public int TechnicalSkillId { get; set; }
+        public TechnicalSkill TechnicalSkill { get; set; }
+        
+        public ICollection<CoderTechnicalSkillLevel> CoderTechnicalSkillLevels { get; set; }
     }
 }

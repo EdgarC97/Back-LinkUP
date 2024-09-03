@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,14 +9,27 @@ namespace Api_Link_up.Models
 {
     public class Coder
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        
+        [Required]
+        [StringLength(100)]
         public string Name { get; set; }
-        public DateTime Birthday { get; set; }
+        
+        public DateOnly Birthday { get; set; }
+        
+        [StringLength(500)]
         public string Description { get; set; }
+        
+        [StringLength(255)]
         public string UrlImage { get; set; }
-        public virtual Gender Gender { get; set; }
-        public virtual ICollection<CoderSoftSkill> CoderSoftSkills { get; set; }
-        public virtual ICollection<CoderLanguagesLevel> CoderLanguagesLevels { get; set; }
-        public virtual ICollection<CoderTechnicalSkillsLevel> CoderTechnicalSkillsLevels { get; set; }
+        
+        public int GenderId { get; set; }
+        public Gender Gender { get; set; }
+        
+        public ICollection<CoderSoftSkill> CoderSoftSkills { get; set; }
+        public ICollection<CoderLanguageLevel> CoderLanguageLevels { get; set; }
+        public ICollection<CoderTechnicalSkillLevel> CoderTechnicalSkillLevels { get; set; }
     }
 }

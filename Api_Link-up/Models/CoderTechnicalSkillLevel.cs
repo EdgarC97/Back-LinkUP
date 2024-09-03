@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace Api_Link_up.Models
 {
-    public class CoderTechnicalSkillsLevel
+    public class CoderTechnicalSkillLevel
     {
-        public int Id { get; set; }
         public int CoderId { get; set; }
         public Coder Coder { get; set; }
-        public int TechnicalSkillsLevelId { get; set; }
-        public TechnicalSkillsLevel TechnicalSkillsLevel { get; set; }
+        
+        public int TechnicalSkillLevelId { get; set; }
+        public TechnicalSkillLevel TechnicalSkillLevel { get; set; }
     }
 }
