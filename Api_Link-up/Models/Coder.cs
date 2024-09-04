@@ -17,7 +17,7 @@ namespace Api_Link_up.Models
         [StringLength(100)]
         public string Name { get; set; }
         
-        public DateOnly Birthday { get; set; }
+        public DateTime Birthday { get; set; }
         
         [StringLength(500)]
         public string Description { get; set; }

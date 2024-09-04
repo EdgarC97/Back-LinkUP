@@ -90,8 +90,13 @@ namespace Api_Link_up.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateCoder(Coder coder)
+        public async Task<IActionResult> CreateCoder([FromBody] Coder coder)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             _context.Coders.Add(coder);
             await _context.SaveChangesAsync();
 
