@@ -1,18 +1,33 @@
+using System.Text.Json.Serialization;
 using Api_Link_up.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar servicios para usar MySQL
+// Configurar servicios para usar PostgreSQL
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")
 ));
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson() // Añade soporte para JSON Patch
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
+
+// Configura Swagger para manejar JSON Patch
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
+
+    // Configura Swagger para usar NewtonsoftJson
+    c.OperationFilter<SwaggerJsonPatchOperationFilter>();
+});
+
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -31,3 +46,21 @@ app.MapControllers();
 
 app.Run();
 
+// Clase auxiliar para configurar Swagger para JSON Patch
+public class SwaggerJsonPatchOperationFilter : IOperationFilter
+{
+    public void Apply(OpenApiOperation operation, OperationFilterContext context)
+    {
+        if (operation.RequestBody?.Content.Any(x => x.Key.ToLower().Contains("json-patch+json")) == true)
+        {
+            operation.RequestBody.Content["application/json-patch+json"].Schema = new OpenApiSchema
+            {
+                Type = "array",
+                Items = new OpenApiSchema
+                {
+                    Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = "Operation" }
+                }
+            };
+        }
+    }
+}

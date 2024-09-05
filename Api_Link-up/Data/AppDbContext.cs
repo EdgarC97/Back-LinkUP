@@ -35,12 +35,15 @@ namespace Api_Link_up.Data
             modelBuilder.Entity<CoderSoftSkill>()
                 .HasOne(css => css.Coder)
                 .WithMany(c => c.CoderSoftSkills)
-                .HasForeignKey(css => css.CoderId);
+                .HasForeignKey(css => css.CoderId)
+                .OnDelete(DeleteBehavior.Cascade); // Elimina entradas en CoderSoftSkills
+                
 
             modelBuilder.Entity<CoderSoftSkill>()
                 .HasOne(css => css.SoftSkill)
                 .WithMany(ss => ss.CoderSoftSkills)
-                .HasForeignKey(css => css.SoftSkillId);
+                .HasForeignKey(css => css.SoftSkillId)
+                .OnDelete(DeleteBehavior.Restrict); // No elimina SoftSkills
 
             // Configure many-to-many relationship for CoderLanguageLevel
             modelBuilder.Entity<CoderLanguageLevel>()
@@ -49,12 +52,14 @@ namespace Api_Link_up.Data
             modelBuilder.Entity<CoderLanguageLevel>()
                 .HasOne(cll => cll.Coder)
                 .WithMany(c => c.CoderLanguageLevels)
-                .HasForeignKey(cll => cll.CoderId);
+                .HasForeignKey(cll => cll.CoderId)
+                .OnDelete(DeleteBehavior.Cascade);// Elimina entradas en CoderLanguageLevels
 
             modelBuilder.Entity<CoderLanguageLevel>()
                 .HasOne(cll => cll.LanguageLevel)
                 .WithMany(ll => ll.CoderLanguageLevels)
-                .HasForeignKey(cll => cll.LanguageLevelId);
+                .HasForeignKey(cll => cll.LanguageLevelId)
+                .OnDelete(DeleteBehavior.Restrict); // No elimina LanguageLevels
 
             // Configure many-to-many relationship for CoderTechnicalSkillLevel
             modelBuilder.Entity<CoderTechnicalSkillLevel>()
@@ -63,12 +68,14 @@ namespace Api_Link_up.Data
             modelBuilder.Entity<CoderTechnicalSkillLevel>()
                 .HasOne(ctsl => ctsl.Coder)
                 .WithMany(c => c.CoderTechnicalSkillLevels)
-                .HasForeignKey(ctsl => ctsl.CoderId);
+                .HasForeignKey(ctsl => ctsl.CoderId)
+                .OnDelete(DeleteBehavior.Cascade); // Elimina entradas en CoderTechnicalSkillLevels
 
             modelBuilder.Entity<CoderTechnicalSkillLevel>()
                 .HasOne(ctsl => ctsl.TechnicalSkillLevel)
                 .WithMany(tsl => tsl.CoderTechnicalSkillLevels)
-                .HasForeignKey(ctsl => ctsl.TechnicalSkillLevelId);
+                .HasForeignKey(ctsl => ctsl.TechnicalSkillLevelId)
+                .OnDelete(DeleteBehavior.Restrict); // No elimina TechnicalSkillLevels
         }
     }
 

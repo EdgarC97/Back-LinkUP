@@ -1,0 +1,51 @@
+// Ejemplo 1: Actualizar el nombre
+[
+  { "op": "replace", "path": "/name", "value": "Nuevo Nombre" }
+]
+
+// Ejemplo 2: Actualizar la fecha de nacimiento
+[
+  { "op": "replace", "path": "/birthday", "value": "1990-01-01T00:00:00Z" }
+]
+
+// Ejemplo 3: Actualizar la descripción
+[
+  { "op": "replace", "path": "/description", "value": "Nueva descripción del coder" }
+]
+
+// Ejemplo 4: Actualizar la URL de la imagen
+[
+  { "op": "replace", "path": "/urlImage", "value": "https://ejemplo.com/nueva-imagen.jpg" }
+]
+
+// Ejemplo 5: Actualizar el ID del género
+[
+  { "op": "replace", "path": "/genderId", "value": 2 }
+]
+
+// Ejemplo 6: Actualizar múltiples campos a la vez
+[
+  { "op": "replace", "path": "/name", "value": "Nuevo Nombre" },
+  { "op": "replace", "path": "/description", "value": "Nueva descripción" },
+  { "op": "replace", "path": "/birthday", "value": "1995-05-15T00:00:00Z" }
+]
+
+// Ejemplo 7: Añadir una nueva habilidad blanda (asumiendo que el ID 5 existe en SoftSkills)
+[
+  { "op": "add", "path": "/coderSoftSkills/-", "value": { "softSkillId": 5 } }
+]
+
+// Ejemplo 8: Eliminar una habilidad blanda (asumiendo que existe una con SoftSkillId 3)
+[
+  { "op": "remove", "path": "/coderSoftSkills/3" }
+]
+
+// Ejemplo 9: Actualizar un nivel de lenguaje (asumiendo que existe uno con LanguageLevelId 2)
+[
+  { "op": "replace", "path": "/coderLanguageLevels/2/languageLevelId", "value": 3 }
+]
+
+// Ejemplo 10: Añadir un nuevo nivel de habilidad técnica
+[
+  { "op": "add", "path": "/coderTechnicalSkillLevels/-", "value": { "technicalSkillLevelId": 4 } }
+]

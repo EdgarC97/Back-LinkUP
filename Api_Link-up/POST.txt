@@ -1,0 +1,11 @@
+{
+  "name": "Edgar Cardona",
+  "birthday": "1997-01-21T00:00:00Z",
+  "description": "Software Developer / Architect",
+  "urlImage": "https://avatars.githubusercontent.com/u/163922176?v=4",
+  "genderId": 1,
+  "softSkillIds": [1, 2],
+  "languageLevelIds": [1, 3],
+  "technicalSkillLevelIds": [1, 2]
+}
+  

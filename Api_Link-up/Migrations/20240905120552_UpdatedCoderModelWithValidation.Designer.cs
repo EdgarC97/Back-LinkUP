@@ -3,6 +3,7 @@ using System;
 using Api_Link_up.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Api_Link_up.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240905120552_UpdatedCoderModelWithValidation")]
+    partial class UpdatedCoderModelWithValidation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -243,7 +246,7 @@ namespace Api_Link_up.Migrations
                     b.HasOne("Api_Link_up.Models.LanguageLevel", "LanguageLevel")
                         .WithMany("CoderLanguageLevels")
                         .HasForeignKey("LanguageLevelId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Coder");
@@ -262,7 +265,7 @@ namespace Api_Link_up.Migrations
                     b.HasOne("Api_Link_up.Models.SoftSkill", "SoftSkill")
                         .WithMany("CoderSoftSkills")
                         .HasForeignKey("SoftSkillId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Coder");
@@ -281,7 +284,7 @@ namespace Api_Link_up.Migrations
                     b.HasOne("Api_Link_up.Models.TechnicalSkillLevel", "TechnicalSkillLevel")
                         .WithMany("CoderTechnicalSkillLevels")
                         .HasForeignKey("TechnicalSkillLevelId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Coder");

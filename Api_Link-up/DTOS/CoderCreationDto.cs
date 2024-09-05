@@ -1,22 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Api_Link_up.Models
+namespace Api_Link_up.DTOS
 {
-    public class Coder
+    public class CoderCreationDto
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
         [Required]
         [StringLength(100)]
         public string Name { get; set; }
-        
+
         [Required]
         public DateTime Birthday { get; set; }
 
@@ -28,10 +23,14 @@ namespace Api_Link_up.Models
 
         [Required]
         public int GenderId { get; set; }
-        public Gender Gender { get; set; }
 
-        public ICollection<CoderSoftSkill> CoderSoftSkills { get; set; }
-        public ICollection<CoderLanguageLevel> CoderLanguageLevels { get; set; }
-        public ICollection<CoderTechnicalSkillLevel> CoderTechnicalSkillLevels { get; set; }
+        [Required]
+        public List<int> SoftSkillIds { get; set; }
+
+        [Required]
+        public List<int> LanguageLevelIds { get; set; }
+
+        [Required]
+        public List<int> TechnicalSkillLevelIds { get; set; }
     }
 }

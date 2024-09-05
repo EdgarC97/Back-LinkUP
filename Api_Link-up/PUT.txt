@@ -1,0 +1,11 @@
+{
+  "id": 5,
+  "name": "Juan Kiki",
+  "birthday": "1997-01-21T00:00:00Z",
+  "description": "Software Developer / Architect",
+  "urlImage": "https://avatars.githubusercontent.com/u/163922176?v=4",
+  "genderId": 2,
+  "softSkillIds": [2, 3],
+  "languageLevelIds": [1, 2],
+  "technicalSkillLevelIds": [2, 3]
+}
