@@ -1,4 +1,4 @@
-#                                 Riwi Link-up-ms - Backend API# Riwi Link-up-ms - Backend API
+#                                 Riwi Link-up-ms - Backend API
 
 [![.Net](https://neosmart.net/blog/wp-content/uploads/2019/06/dot-NET-Standard-Logo-Rectangle.png)](https://dotnet.microsoft.com/apps/aspnet/apis)
 
