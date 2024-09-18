@@ -24,12 +24,12 @@ Riwi Link-up-ms is a robust WebAPI developed in C# using ASP.NET Core, designed 
 - **Admin Interface**: Dedicated endpoints for administrative tasks and bulk updates.
 - **Analytics Dashboard**: Endpoints providing valuable insights on coder demographics and platform usage.
 
-  ## Data Transfer Objects (DTOs)
+## Data Transfer Objects (DTOs)
 
 The API utilizes a variety of DTOs to ensure efficient and secure data transfer between the client and server:
 
 - **UserDto**: For basic user information transfer
-- **RegisterUserDto**: Specifically for user registration processes
+- **RegisterUserDto**: Specifically for user registration processes- **RegisterUserDto**: Specifically for user registration processes
 - **LoginUserDto**: Handles login credentials
 - **CoderDtoV1** and **CoderDtoV2**: Different versions for coder data representation
 - **CoderCreationDto**: Used when creating new coder profiles
@@ -41,8 +41,6 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
 
 > [!NOTE]
 > The API is designed with scalability in mind, utilizing PostgreSQL for data storage and incorporating performance optimizations like caching and asynchronous programming.
-
-This WebAPI serves as the backbone for the Riwi LinKUp platform, facilitating professional networking, skill matching, and project allocation in the tech industry.
 
 # Technical Overview
 
