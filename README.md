@@ -1,11 +1,8 @@
-# Riwi Link-up - Backend API
+# Riwi Link-up-ms - Backend API
 
 [![.Net](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/480px-.NET_Core_Logo.svg.png)](https://dotnet.microsoft.com/apps/aspnet/apis)
 
 ![Project Logo](https://example.com/path/to/your/logo.png)
-
-A robust and scalable WebAPI built with C# and ASP.NET Core.
-
 
 [![build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/Riwi-Link-up/actions)
 [![run](https://img.shields.io/badge/run-passing-brightgreen.svg)](https://your-deployment-url.com)
@@ -27,8 +24,6 @@ A robust and scalable WebAPI built with C# and ASP.NET Core.
 
 >[!CAUTION]
 >Use caution when deploying to production environments. Always test thoroughly in a staging environment first.
-
-# Riwi Link-up-ms
 
 Riwi Link-up-ms is a robust WebAPI developed in C# using ASP.NET Core, designed to power the Riwi LinKUp platform. This comprehensive backend solution facilitates efficient matching between coders and user projects, emphasizing technical skills, English proficiency, and soft skills.
 
