@@ -3,19 +3,21 @@
 [![.Net](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/480px-.NET_Core_Logo.svg.png)](https://dotnet.microsoft.com/es-es/apps/aspnet/apis)
 
 
-![Logo del Proyecto](/ruta/a/tu/logo.png)![Project Logo](/ruta/a/tu/logo.png)
+[Project Logo](/ruta/a/tu/logo.png)
 
 Una WebAPI robusta y escalable construida con C# y ASP.NET Core.
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![build](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
-[![run](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![run](https://img.shields.io/badge/run-passing-brightgreen.svg)]()
 [![version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)]()
 [![version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)]()
 [![version](https://img.shields.io/badge/version-3.0.0-brightgreen.svg)]()
 
+>[!NOTE]
+>Nota especial
 
-## Descripción## Description## Description## Description
+## Description
 
 [Tu Proyecto] es una WebAPI desarrollada en C# que [breve descripción del propósito y características principales de tu API].
 
