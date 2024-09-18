@@ -20,7 +20,7 @@ A robust and scalable WebAPI built with C# and ASP.NET Core.
 >Check out our [documentation](https://docs.example.com) for detailed usage instructions.
 
 >[!IMPORTANT]
->Ensure you have the latest .NET SDK installed before setting up the project.
+>Ensure you have the version .NET 8.0 SDK installed before setting up the project.
 
 >[!WARNING]
 >Breaking changes may occur in major version updates. Always review the changelog before upgrading.
@@ -28,9 +28,26 @@ A robust and scalable WebAPI built with C# and ASP.NET Core.
 >[!CAUTION]
 >Use caution when deploying to production environments. Always test thoroughly in a staging environment first.
 
-## Description
+# Riwi Link-up-ms
 
-Riwi Link-up-ms is a WebAPI developed in C# that provides a comprehensive backend solution for managing social connections and professional networking. It offers features such as user profile management, connection requests, messaging, and analytics for network growth.
+Riwi Link-up-ms is a robust WebAPI developed in C# using ASP.NET Core, designed to power the Riwi LinKUp platform. This comprehensive backend solution facilitates efficient matching between coders and user projects, emphasizing technical skills, English proficiency, and soft skills.
+
+> [!IMPORTANT]
+> This API forms the foundation of Riwi LinKUp, enabling seamless connections between talented coders and innovative projects.
+
+## Key Features
+
+- **User and Coder Profile Management**: Comprehensive CRUD operations for managing user and coder profiles.
+- **Advanced Filtering**: Sophisticated system for filtering coder profiles based on various criteria.
+- **Authentication and Authorization**: Secure JWT-based authentication and role-based access control.
+- **Admin Interface**: Dedicated endpoints for administrative tasks and bulk updates.
+- **Analytics Dashboard**: Endpoints providing valuable insights on coder demographics and platform usage.
+- **Sector Management**: Functionality to manage and retrieve sector information.
+
+> [!NOTE]
+> The API is designed with scalability in mind, utilizing SQL Server for data storage and incorporating performance optimizations like caching and asynchronous programming.
+
+This WebAPI serves as the backbone for the Riwi LinKUp platform, facilitating professional networking, skill matching, and project allocation in the tech industry.
 
 # Technical Overview
 
