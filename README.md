@@ -2,8 +2,6 @@
 
 [![.Net](https://neosmart.net/blog/wp-content/uploads/2019/06/dot-NET-Standard-Logo-Rectangle.png)](https://dotnet.microsoft.com/apps/aspnet/apis)
 
-![Project Logo](https://example.com/path/to/your/logo.png)
-
 [![build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/Riwi-Link-up/actions)
 [![run](https://img.shields.io/badge/run-passing-brightgreen.svg)](https://your-deployment-url.com)
 [![version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/yourusername/Riwi-Link-up/releases/tag/v1.0.0)
@@ -49,9 +47,6 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
 - Follows RESTful principles for endpoint design
 - Utilizes Entity Framework Core for ORM capabilities
 
-> [!IMPORTANT]
-> This API forms the foundation of Riwi LinKUp, enabling efficient matching of coders with user projects based on technical prowess, English proficiency, and soft skills.
-
 ## Core Functionalities
 
 ### Account Management
@@ -73,27 +68,13 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
   - `PUT /api/v2/coders/{id}`
   - `PATCH /api/v2/coders/{id}`
   - `DELETE /api/v2/coders/{id}`
+    
+> [!CAUTION]
+> Be careful when using the DELETE endpoint as it permanently removes a user from the system.> Be careful when using the DELETE endpoint as it permanently removes a user from the system.> Be careful when using the DELETE endpoint as it permanently removes a user from the system.
 
 > [!TIP]
 > The v2 endpoints provide more detailed and flexible operations for coder profiles.
 
-### User Access and Filtering
-- Advanced filtering system for coder profiles
-- Endpoints: 
-  - `GET /api/v1/coders/filter?language={lang}&englishLevel={level}&softSkills={skills}`
-
-### Admin Management Interface
-- Secure endpoints for administrative tasks
-- Endpoints: 
-  - `PUT /api/admin/coders/{id}`
-  - `POST /api/admin/bulkUpdate`
-
-### Sector Management
-- Endpoint:
-  - `GET /api/v1/sector`
-
-> [!NOTE]
-> This endpoint retrieves all sectors available in the system.
 
 ### User Management
 - Endpoints:
@@ -103,7 +84,7 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
   - `DELETE /api/v1/user/{email}`
 
 > [!CAUTION]
-> Be careful when using the DELETE endpoint as it permanently removes a user from the system.
+> Be careful when using the DELETE endpoint as it permanently removes a user from the system.> Be careful when using the DELETE endpoint as it permanently removes a user from the system.> Be careful when using the DELETE endpoint as it permanently removes a user from the system.
 
 ### Dashboard
 - Endpoints:
