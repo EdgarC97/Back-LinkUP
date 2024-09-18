@@ -10,25 +10,11 @@
 [![version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)](https://github.com/yourusername/Riwi-Link-up/releases/tag/v2.0.0)
 [![version](https://img.shields.io/badge/version-3.0.0-brightgreen.svg)](https://github.com/yourusername/Riwi-Link-up/releases/tag/v3.0.0)
 
->[!NOTE]
->This project is actively maintained and updated regularly.
 
->[!TIP]
->Check out our [documentation](https://docs.example.com) for detailed usage instructions.
-
->[!IMPORTANT]
->Ensure you have the version .NET 8.0 SDK installed before setting up the project.
-
->[!WARNING]
->Breaking changes may occur in major version updates. Always review the changelog before upgrading.
-
->[!CAUTION]
->Use caution when deploying to production environments. Always test thoroughly in a staging environment first.
-
-Riwi Link-up-ms is a robust WebAPI developed in C# using ASP.NET Core, designed to power the Riwi LinKUp platform. This comprehensive backend solution facilitates efficient matching between coders and user projects, emphasizing technical skills, English proficiency, and soft skills.
+Riwi Link-up-ms is a robust WebAPI developed in C# using ASP.NET Core, designed to power and connect with database the Riwi LinKUp platform. This comprehensive backend solution facilitates efficient matching between Riwi clients with coders, emphasizing in their personal information and projects.
 
 > [!IMPORTANT]
-> This API forms the foundation of Riwi LinKUp, enabling seamless connections between talented coders and innovative projects.
+> This API forms the foundation of Riwi LinKUp platform, enabling seamless connections between frontend and backend.
 
 ## Key Features
 
@@ -37,10 +23,24 @@ Riwi Link-up-ms is a robust WebAPI developed in C# using ASP.NET Core, designed 
 - **Authentication and Authorization**: Secure JWT-based authentication and role-based access control.
 - **Admin Interface**: Dedicated endpoints for administrative tasks and bulk updates.
 - **Analytics Dashboard**: Endpoints providing valuable insights on coder demographics and platform usage.
-- **Sector Management**: Functionality to manage and retrieve sector information.
+
+  ## Data Transfer Objects (DTOs)
+
+The API utilizes a variety of DTOs to ensure efficient and secure data transfer between the client and server:
+
+- **UserDto**: For basic user information transfer
+- **RegisterUserDto**: Specifically for user registration processes
+- **LoginUserDto**: Handles login credentials
+- **CoderDtoV1** and **CoderDtoV2**: Different versions for coder data representation
+- **CoderCreationDto**: Used when creating new coder profiles
+- **CoderUpdateDto**: For updating existing coder information
+- **CoderResponseDto**: Comprehensive DTO for detailed coder information responses
+
+> [!TIP]
+> The use of DTOs helps in maintaining a clear separation between the internal data model and the data exposed via the API, enhancing security and flexibility.
 
 > [!NOTE]
-> The API is designed with scalability in mind, utilizing SQL Server for data storage and incorporating performance optimizations like caching and asynchronous programming.
+> The API is designed with scalability in mind, utilizing PostgreSQL for data storage and incorporating performance optimizations like caching and asynchronous programming.
 
 This WebAPI serves as the backbone for the Riwi LinKUp platform, facilitating professional networking, skill matching, and project allocation in the tech industry.
 
@@ -240,6 +240,17 @@ dotnet test
 
 Contributions are welcome. Please open an issue or submit a pull request with your changes. Make sure to follow our [contribution guidelines](CONTRIBUTING.md).
 
-## License
+>[!NOTE]
+>This project is actively maintained and updated regularly.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+>[!TIP]
+>Check out our [documentation](https://docs.example.com) for detailed usage instructions.
+
+>[!IMPORTANT]
+>Ensure you have the version .NET 8.0 SDK installed before setting up the project.
+
+>[!WARNING]
+>Breaking changes may occur in major version updates. Always review the changelog before upgrading.
+
+>[!CAUTION]
+>Use caution when deploying to production environments. Always test thoroughly in a staging environment first.
