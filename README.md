@@ -67,7 +67,7 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
   - `DELETE /api/v2/coders/{id}`
     
 > [!CAUTION]
-> Be careful when using the DELETE endpoint as it permanently removes a user from the system.>
+> Be careful when using the DELETE endpoint as it permanently removes a user from the system.
 
 > [!TIP]
 > The v2 endpoints provide more detailed and flexible operations for coder profiles.
@@ -81,7 +81,7 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
   - `DELETE /api/v1/user/{email}`
 
 > [!CAUTION]
-> Be careful when using the DELETE endpoint as it permanently removes a user from the system.> 
+> Be careful when using the DELETE endpoint as it permanently removes a user from the system. 
 
 ### Dashboard
 - Endpoints:
@@ -107,6 +107,9 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
 > [!NOTE]
 > The API is designed with scalability in mind, utilizing PostgreSQL for data storage and incorporating performance optimizations like caching and asynchronous programming.
 
+> [!TIP]
+> Consider implementing caching for endpoints that return data that doesn't change frequently.
+
 ## API Features
 - Pagination support for large data sets
 - Sorting and filtering capabilities on relevant endpoints
@@ -115,13 +118,6 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
 ## Integration Points
 - Endpoints designed for seamless integration with the frontend application
 - Supports both JSON and XML response formats for flexibility
-
-## Performance Optimization
-- Implements caching mechanisms for frequently accessed data
-- Asynchronous programming model for improved scalability
-
-> [!TIP]
-> Consider implementing caching for endpoints that return data that doesn't change frequently.
 
 ## Deployment and Scalability
 - Containerized using Docker for easy deployment
