@@ -37,9 +37,6 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
 > [!TIP]
 > The use of DTOs helps in maintaining a clear separation between the internal data model and the data exposed via the API, enhancing security and flexibility.
 
-> [!NOTE]
-> The API is designed with scalability in mind, utilizing PostgreSQL for data storage and incorporating performance optimizations like caching and asynchronous programming.
-
 # Technical Overview
 
 ## API Architecture
@@ -106,6 +103,9 @@ The API utilizes a variety of DTOs to ensure efficient and secure data transfer 
 ## Database Design
 - Utilizes PostgreSQL for relational data storage
 - Includes tables for Coders, Users and relational mapping tables
+
+> [!NOTE]
+> The API is designed with scalability in mind, utilizing PostgreSQL for data storage and incorporating performance optimizations like caching and asynchronous programming.
 
 ## API Features
 - Pagination support for large data sets
