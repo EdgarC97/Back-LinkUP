@@ -39,39 +39,87 @@ Riwi Link-up-ms is a WebAPI developed in C# that provides a comprehensive backen
 - Follows RESTful principles for endpoint design
 - Utilizes Entity Framework Core for ORM capabilities
 
+> [!IMPORTANT]
+> This API forms the foundation of Riwi LinKUp, enabling efficient matching of coders with user projects based on technical prowess, English proficiency, and soft skills.
+
 ## Core Functionalities
 
-### Developer Profile Management
-- CRUD operations for developer profiles
-- Endpoints: 
-  - `GET /api/developers`
-  - `POST /api/developers`
-  - `PUT /api/developers/{id}`
-  - `DELETE /api/developers/{id}`
+### Account Management
+- Endpoints:
+  - `POST /api/v1/account/register`
+  - `POST /api/v1/account/login`
 
-### Client Access and Filtering
-- Advanced filtering system for developer profiles
+> [!NOTE]
+> The Account Controller handles user registration and authentication.
+
+### Coder Profile Management
+- CRUD operations for coder profiles
 - Endpoints: 
-  - `GET /api/developers/filter?language={lang}&englishLevel={level}&softSkills={skills}`
+  - `GET /api/v1/coders`
+  - `GET /api/v1/coders/{id}`
+  - `GET /api/v2/coders`
+  - `GET /api/v2/coders/{id}`
+  - `POST /api/v2/coders`
+  - `PUT /api/v2/coders/{id}`
+  - `PATCH /api/v2/coders/{id}`
+  - `DELETE /api/v2/coders/{id}`
+
+> [!TIP]
+> The v2 endpoints provide more detailed and flexible operations for coder profiles.
+
+### User Access and Filtering
+- Advanced filtering system for coder profiles
+- Endpoints: 
+  - `GET /api/v1/coders/filter?language={lang}&englishLevel={level}&softSkills={skills}`
 
 ### Admin Management Interface
 - Secure endpoints for administrative tasks
 - Endpoints: 
-  - `PUT /api/admin/developers/{id}`
+  - `PUT /api/admin/coders/{id}`
   - `POST /api/admin/bulkUpdate`
 
+### Sector Management
+- Endpoint:
+  - `GET /api/v1/sector`
+
+> [!NOTE]
+> This endpoint retrieves all sectors available in the system.
+
+### User Management
+- Endpoints:
+  - `GET /api/v1/user`
+  - `GET /api/v1/user/email/{email}`
+  - `PATCH /api/v1/user/{email}`
+  - `DELETE /api/v1/user/{email}`
+
+> [!CAUTION]
+> Be careful when using the DELETE endpoint as it permanently removes a user from the system.
+
+### Dashboard
+- Endpoints:
+  - `GET /api/dashboard/coders-in-training`
+  - `GET /api/dashboard/frontend-coders`
+  - `GET /api/dashboard/backend-coders`
+  - `GET /api/dashboard/companies-by-month`
+
+> [!TIP]
+> These endpoints provide valuable insights for administrative purposes.
+
 ## Data Models
-- **Developer:** Encapsulates developer information including technical skills, language proficiency, and soft skills
-- **Client:** Represents RIWI clients with specific project requirements
-- **Project:** Defines project structures and developer assignments
+- **Coder:** Encapsulates coder information including technical skills, language proficiency, and soft skills
+- **User:** Represents Riwi LinKUp users with specific project requirements
+- **Project:** Defines project structures and coder assignments
 
 ## Authentication and Authorization
 - Implements JWT (JSON Web Tokens) for secure API access
-- Role-based access control (RBAC) for client and admin functionalities
+- Role-based access control (RBAC) for user and admin functionalities
+
+> [!WARNING]
+> Always keep your JWT secret key secure and never expose it in client-side code.
 
 ## Database Design
 - Utilizes SQL Server for relational data storage
-- Includes tables for Developers, Clients, Projects, Skills, and relational mapping tables
+- Includes tables for Coders, Users, Projects, Skills, and relational mapping tables
 
 ## API Features
 - Pagination support for large data sets
@@ -86,6 +134,9 @@ Riwi Link-up-ms is a WebAPI developed in C# that provides a comprehensive backen
 - Implements caching mechanisms for frequently accessed data
 - Asynchronous programming model for improved scalability
 
+> [!TIP]
+> Consider implementing caching for endpoints that return data that doesn't change frequently.
+
 ## Monitoring and Logging
 - Integrated logging system for tracking API usage and errors
 - Endpoints for health checks and system status: `GET /api/health`
@@ -94,7 +145,8 @@ Riwi Link-up-ms is a WebAPI developed in C# that provides a comprehensive backen
 - Containerized using Docker for easy deployment
 - Designed for horizontal scalability in cloud environments
 
-This backend API forms the foundation of Riwi LinKUp, enabling efficient matching of developers with client projects based on technical prowess, English proficiency, and soft skills. The system's architecture ensures that administrators can easily update and manage developer information, keeping the talent pool aligned with market demands and project objectives.
+> [!NOTE]
+> The system's architecture ensures that administrators can easily update and manage coder information, keeping the talent pool aligned with market demands and project objectives.
 
 
 ## System Requirements
