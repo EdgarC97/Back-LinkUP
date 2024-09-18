@@ -16,12 +16,16 @@ Una WebAPI robusta y escalable construida con C# y ASP.NET Core.
 
 >[!NOTE]
 >Nota especial
+
 >[!TIP]
 >Nota especial
+
 >[!IMPORTANT]
 >Nota especial
+
 >[!WARNING]
 >Nota especial
+
 >[!CAUTION]
 >Nota especial
 
