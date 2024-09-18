@@ -1,6 +1,6 @@
 # Riwi Link-up-ms - Backend API
 
-[![.Net](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/480px-.NET_Core_Logo.svg.png)](https://dotnet.microsoft.com/apps/aspnet/apis)
+[![.Net](https://neosmart.net/blog/wp-content/uploads/2019/06/dot-NET-Standard-Logo-Rectangle.png)](https://dotnet.microsoft.com/apps/aspnet/apis)
 
 ![Project Logo](https://example.com/path/to/your/logo.png)
 
