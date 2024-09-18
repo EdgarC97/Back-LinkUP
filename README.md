@@ -8,7 +8,7 @@
 [![version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)](https://github.com/yourusername/Riwi-Link-up/releases/tag/v2.0.0)
 [![version](https://img.shields.io/badge/version-3.0.0-brightgreen.svg)](https://github.com/yourusername/Riwi-Link-up/releases/tag/v3.0.0)
 
-## Project description
+## Project Description
 Riwi Link-up-ms is a robust WebAPI developed in C# using ASP.NET Core, designed to power and connect with database the Riwi LinKUp platform. This comprehensive backend solution facilitates efficient matching between Riwi clients with coders, emphasizing in their personal information and projects.
 
 > [!IMPORTANT]
